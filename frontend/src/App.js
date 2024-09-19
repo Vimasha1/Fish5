@@ -26,6 +26,20 @@ function App() {
             </div>
         </Router>
     );
+import { Routes, Route } from 'react-router-dom'; // No Router here
+import BoatRD from './components/BoatRDs/BoatRD';
+import TripD from './components/TripD/TripD';
+import TripR from './components/TripR/TripR';
+import BoatR from './components/BoatR/BoatR';
+import UpData from './components/Updata/UpData';
+import BoatHome from './components/BoatHome/BoatHome';
+import { Routes, Route } from 'react-router-dom';
+import Home from "./Components/Home/Home";
+import AddStock from './Components/Add stock/AddStock';
+//import ShowDetails from './Component/Details/Details';
+//import Details from './Component/Details/Details';
+import AddNewScock from './Components/Add new stock/AddNewScock';
+import UpdateScock from './Components/UpdateScock/UpdateScock';
 import {Route, Routes } from 'react-router';
 import './App.css';
 import Loan from './Components/Loan/Loan';
@@ -38,9 +52,35 @@ import Login from './Components/Login/Login';
 import Contactadmin from './Components/Contactadmin/Contactadmin';
 import Uploadcollateral from './Components/Uploadcollateral/Uploadcollateral';
 
+
+function App() {
+  return (
+    <React.Fragment>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/mainhome" element={<Home />} />
+      <Route path="/addstock" element={<AddStock />} />
+      <Route path="/AddNewStock" element={<AddNewScock />} />
+      <Route path="/addstock/:id" element={<UpdateScock />} />
+
+
+    </Routes>
+    </React.Fragment>
+
+
 function App() {
   return (
     <div>
+      
+      <BoatHome />
+      <Routes>
+        <Route path="/Boats" element={<BoatHome />} />
+        <Route path="/BoatRegistration" element={<BoatR />} />
+        <Route path="/BoatDetails" element={<BoatRD />} />
+        <Route path="/BoatDetails/:id" element={<UpData />} />
+        <Route path="/Schedule" element={<TripR />} />
+        <Route path="/ScheduleDetails" element={<TripD />} />
+      </Routes>
       <Nav />
       <React.Fragment>
         <Routes>
