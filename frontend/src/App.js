@@ -1,27 +1,28 @@
-// App.js
 import React from 'react';
-import SideNav from './SideNav';
-import Footer from './Footer';
-import Dash from './Dash'; 
+import { Routes, Route } from 'react-router-dom';
+import Home from "./Components/Home/Home";
+import AddStock from './Components/Add stock/AddStock';
+//import ShowDetails from './Component/Details/Details';
+//import Details from './Component/Details/Details';
+import AddNewScock from './Components/Add new stock/AddNewScock';
+import UpdateScock from './Components/UpdateScock/UpdateScock';
 
 
-const App = () => {
+
+function App() {
   return (
-    <div>
-      <SideNav />
-      
-      <div style={{ marginLeft: '260px', padding: '20px' }}>
+    <React.Fragment>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/mainhome" element={<Home />} />
+      <Route path="/addstock" element={<AddStock />} />
+      <Route path="/AddNewStock" element={<AddNewScock />} />
+      <Route path="/addstock/:id" element={<UpdateScock />} />
 
-      <Dash/>
 
-        
-        {/* Main content goes here */}
-      </div>
-      <Footer />
-    </div>
-    
+    </Routes>
+    </React.Fragment>
   );
-};
-
+}
 
 export default App;
