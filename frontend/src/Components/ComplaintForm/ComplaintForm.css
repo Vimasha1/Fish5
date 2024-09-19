@@ -1,0 +1,57 @@
+.complaint-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group .error {
+    color: red;
+    font-size: 0.875em;
+}
+
+.form-actions {
+    margin-top: 20px;
+}
+
+.form-actions button {
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.complaint-id-section {
+    margin-top: 20px;
+}
+
+.complaint-id-section p {
+    font-size: 1.1em;
+}
+
+.complaint-id-section button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 1em;
+    cursor: pointer;
+}
