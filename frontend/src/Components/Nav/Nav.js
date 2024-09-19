@@ -1,40 +1,44 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './nav.css';
+import React from "react";
+import "./nav.css";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
     <div>
-      <ul className="home-u1">
-        <li className="home-11">
-          <Link to="/Boats" className="home-a">
-            <h1>Boats</h1>
+      <ul className="loan-ul">
+        <li className="loan-ll">
+            <Link to="/mainloan" className="active loan-a">
+          <h1>Loan</h1>
           </Link>
         </li>
-        <li className="home-11">
-          <Link to="/BoatRegistration" className="home-a">
-            <h1>Boat Registration</h1>
+        <li className="loan-ll">
+        <Link to="/addrequest" className="active loan-a">
+          <h1>AddRequest</h1>
           </Link>
         </li>
-        <li className="home-11">
-          <Link to="/BoatDetails" className="home-a">
-            <h1>Boats Details</h1>
+        <li className="loan-ll">
+        <Link to="/requestdetails" className="active loan-a">
+          <h1>RequestsDetails</h1>
           </Link>
         </li>
-        <li className="home-11">
-          <Link to="/Schedule" className="home-a">
-            <h1>Schedule</h1>
+        <li className="loan-ll">
+          <Link to="/contact" className="active loan-a">
+          <h1>ContactAdmin</h1>
           </Link>
         </li>
-        <li className="home-11">
-          <Link to="/ScheduleDetails" className="home-a">
-            <h1>Schedule Details</h1>
+        <li className="loan-ll">
+          <Link to="/upload" className="active loan-a">
+          <h1>UploadCollateral</h1>
           </Link>
         </li>
-        {/* Log in button aligned to the right */}
-        <li className="home-login">
-          <Link to="/login" className="home-a">
-            <h1>Log in</h1>
+        <li className="loan-ll">
+        <Link to="/regi" className="active loan-a">
+          <button>Register</button>
+          </Link>
+        </li>
+        <li className="loan-ll">
+          <Link to="/log" className="active loan-a">
+          <button>Login</button>
           </Link>
         </li>
       </ul>
