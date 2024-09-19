@@ -1,27 +1,27 @@
-// App.js
 import React from 'react';
-import SideNav from './SideNav';
-import Footer from './Footer';
-import Dash from './Dash'; 
+import { Routes, Route } from 'react-router-dom'; // No Router here
+import BoatRD from './components/BoatRDs/BoatRD';
+import TripD from './components/TripD/TripD';
+import TripR from './components/TripR/TripR';
+import BoatR from './components/BoatR/BoatR';
+import UpData from './components/Updata/UpData';
+import BoatHome from './components/BoatHome/BoatHome';
 
-
-const App = () => {
+function App() {
   return (
     <div>
-      <SideNav />
       
-      <div style={{ marginLeft: '260px', padding: '20px' }}>
-
-      <Dash/>
-
-        
-        {/* Main content goes here */}
-      </div>
-      <Footer />
+      <BoatHome />
+      <Routes>
+        <Route path="/Boats" element={<BoatHome />} />
+        <Route path="/BoatRegistration" element={<BoatR />} />
+        <Route path="/BoatDetails" element={<BoatRD />} />
+        <Route path="/BoatDetails/:id" element={<UpData />} />
+        <Route path="/Schedule" element={<TripR />} />
+        <Route path="/ScheduleDetails" element={<TripD />} />
+      </Routes>
     </div>
-    
   );
-};
-
+}
 
 export default App;
